@@ -1,0 +1,51 @@
+//JOY THAKKAR
+//24070123051
+
+#include <iostream>
+using namespace std;
+
+class Student {
+  string name;
+  int age;
+  int year;
+  char divi;
+
+  public:
+  Student(string n, int a, int y, char d) {
+    name = n;
+    age = a;
+    year = y;
+    divi = d;
+  }
+
+  Student(const Student &s) {
+    name = s.name;
+    age = s.age;
+    year = s.year;
+    divi = s.divi;
+    cout << "Copy constructor called!" << endl;
+  }
+
+  void display() {
+    cout << "Name:" << name << " Age:" << age << " Year:" << year << " Division:" << divi << endl;
+  }
+};
+
+int main() {
+  Student s1("Ishika", 19, 2, 'A');
+  cout << "Details of s1:" << endl;
+  s1.display();
+
+  Student s2(s1);
+  cout << "Details of s2 (copied from s1):" << endl;
+  s2.display();
+
+  return 0;
+}
+
+//OUTPUT:
+//Details of s1:
+//Name:Ishika Age:19 Year:2 Division:A
+//Copy constructor called!
+//Details of s2 (copied from s1):
+//Name:Ishika Age:19 Year:2 Division:A
