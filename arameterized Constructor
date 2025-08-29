@@ -1,0 +1,30 @@
+//JOY THAKKAR
+//24070123051
+
+#include <iostream>
+using namespace std;
+
+class Practice{
+    int a,b;
+    public:
+    Practice(int m,int n){
+        a=m;
+        b=n;
+    }
+    
+    void display(){
+      cout<<"a="<<a<<endl<<"b="<<b;  
+    }
+};
+   
+
+int main() {
+    Practice p(1,2);
+    p.display();
+
+    return 0;
+}
+
+//OUTPUT:
+//a=1
+//b=2
