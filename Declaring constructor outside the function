@@ -1,0 +1,54 @@
+//JOY THAKKAR
+//24070123051
+
+#include <iostream>
+using namespace std;
+
+class Student {
+    string name;
+    int PRN;
+    string branch;
+    char divi;
+    double fee;
+
+public:
+    Student();
+    void display();
+};
+
+Student::Student() {
+    cout << "Enter the Name:" << endl;
+    cin >> name;
+    cout << "Enter the PRN:" << endl;
+    cin >> PRN;
+    cout << "Enter the Branch Name:" << endl;
+    cin >> branch;
+    cout << "Enter the Division:" << endl;
+    cin >> divi;
+    cout << "Enter the Fee:" << endl;
+    cin >> fee;
+}
+
+void Student::display() {
+    cout << endl << name << "\t" << PRN << "\t" << branch << "\t" << divi << "\t" << fee;
+}
+
+int main() {
+    Student s;
+    s.display();
+    return 0;
+}
+
+//Output:
+//Enter the Name:
+//Ishika
+//Enter the PRN:
+//7
+//Enter the Branch Name:
+//ENTC
+//Enter the Division:
+//A
+//Enter the Fee:
+//160000
+//
+//Ishika	7	ENTC	A	160000
